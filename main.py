@@ -1,7 +1,7 @@
 import os
 
 os.environ["PYNPUT_BACKEND"] = "uinput"
-backend_name = os.environ.get('', None)
+backend_name = os.environ.get('PYNPUT_BACKEND', None)
 print(backend_name)
 
 from pynput import keyboard
