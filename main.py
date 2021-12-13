@@ -1,7 +1,9 @@
+#!/usr/bin/sudo /home/user/PycharmProjects/hotkeys/venv/bin/python
 import os
 
-os.environ["PYNPUT_BACKEND"] = "uinput"
-backend_name = os.environ.get('PYNPUT_BACKEND', None)
+os.environ["PYNPUT_BACKEND_KEYBOARD"] = "uinput"
+os.environ["PYNPUT_BACKEND_MOUSE"] = "dummy"
+backend_name = os.environ.get('PYNPUT_BACKEND_KEYBOARD', None)
 print(backend_name)
 
 from pynput import keyboard
